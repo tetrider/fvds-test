@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>spare</td>
+                <td>mustbe</td>
+                <td>count</td>
+                <td>arrival</td>
+            </tr>
+            {% for spare in sortedSpares %}
+                <tr>
+                    {% if spare in notEnoughSpares %}
+                    <td><font color="red">{{spare}}</font></td>
+                    {% else %}
+                        <td>{{spare}}</td>
+                    {% endif %}
+                    <td>{{spares[spare]['mustbe']}}</td>
+                    <td>{{spares[spare]['count']}}</td>
+                    <td>{{spares[spare]['arrive']}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
