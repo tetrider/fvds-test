@@ -1,8 +1,10 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python
 from flask import Flask, jsonify, render_template
+from flask_script import Manager
 import requests
 
 app = Flask(__name__)
+app.debug = True
 
 
 def getSpares():
@@ -53,7 +55,6 @@ def jsonPage():
     return jsonify(out)
 
 
+manager = Manager(app)
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
-    # http://localhost:5000/
+    manager.run()
