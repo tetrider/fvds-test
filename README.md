@@ -1,5 +1,5 @@
 # fvds-test
-Requared package: python3.6-venv
+Requared package: python3-venv, python3.6-venv
 
 Installing:
 1. git clone 'https://github.com/tetrider/fvds-test'
