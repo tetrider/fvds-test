@@ -1,9 +1,3 @@
-bin/
 env/
 .env
 .git
-include/
-lib/
-lib64
-pyvenv.cfg
-share/
